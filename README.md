@@ -1,7 +1,20 @@
-# test-ji
+# Question-1
 
-Question 1
+function sumOfDigitFactorial(number){
 
-ghsdjkbdfjkshkldsnbkds
+for (var i = number - 1; i >= 1; i--) {
+    number = parseInt(number * i);
 
-b jasbjkbnadwklhnadskdsdfs
+  }
+
+let numberList = number.toString().split("");
+let z = 0;
+
+for (let j=0; j<numberList.length; j++){
+      z = z + parseInt(numberList[j]);
+    }
+
+return z;
+}
+
+console.log(sumOfDigitFactorial(100));
