@@ -1,46 +1,45 @@
 # Question-2
 
-Class Account {
+    Class Account {
 
-    
-    constructor(name, balance){
-    this.name = name;
-    this.balance = balance;}
+        constructor(name, balance){
+        this.name = name;
+        this.balance = balance;}
 
-    deposit(amount) {
-        this.balance = this.balance + amount;
+        deposit(amount) {
+            this.balance = this.balance + amount;
+        }
+
+        withdraw(amount){
+            if (this.balance > amount)
+                this.balance = this.balance - amount;
+                
+            else
+                console.log('insufficient balance');
+                
+        }
+
+        _str_(){
+            return this.name + '\'s account. Balance : ' + this.balance;
+        }
     }
 
-    withdraw(amount){
-        if (this.balance > amount)
-            this.balance = this.balance - amount;
-            
-        else
-            console.log('insufficient balance');
-            
-    }
-
-    _str_(){
-        return this.name + '\'s account. Balance : ' + this.balance;
-    }
-}
-
-let acc_1 = new Account('Ahmad', 1000);
-let acc_2 = new Account('Betty', 500);
-let acc_3 = new Account('Chong', 2000);
+    let acc_1 = new Account('Ahmad', 1000);
+    let acc_2 = new Account('Betty', 500);
+    let acc_3 = new Account('Chong', 2000);
 
 
-let balanceAcc1 = acc_1.balance;
+    let balanceAcc1 = acc_1.balance;
 
-acc_2.deposit(500)
-let balanceAcc2 = acc_2.balance;
+    acc_2.deposit(500)
+    let balanceAcc2 = acc_2.balance;
 
-acc_3.withdraw(1000)
-let balanceAcc3 = acc_2.balance;
+    acc_3.withdraw(1000)
+    let balanceAcc3 = acc_2.balance;
 
-let strAcc1 = acc_1._str_();
-let strAcc2 = acc_2._str_();
-let strAcc3 = acc_3._str_();
+    let strAcc1 = acc_1._str_();
+    let strAcc2 = acc_2._str_();
+    let strAcc3 = acc_3._str_();
 
 List of Instances:
 1. acc_1, acc_2, acc_3 -> to get Object that contain name and balance
