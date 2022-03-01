@@ -1,6 +1,6 @@
 # Question-2
 
-class Account {
+Class Account {
 
     
     constructor(name, balance){
